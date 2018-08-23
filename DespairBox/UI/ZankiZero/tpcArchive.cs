@@ -80,22 +80,29 @@ namespace DespairBox.UI.ZankiZero
         private void ExtractButton_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfdialog = new SaveFileDialog();
-            sfdialog.Filter = ("Extracted File (*" + Path.GetExtension(treeView1.SelectedNode.Text) + ")|*." + Path.GetExtension(treeView1.SelectedNode.Text) + "|All files (*.*)|*.*");
+            sfdialog.Filter = ("Extracted File (*" + Path.GetExtension(treeView1.SelectedNode.Text) + ")|*" + Path.GetExtension(treeView1.SelectedNode.Text) + "|All files (*.*)|*.*");
             sfdialog.ShowDialog();
 
-            var FileCreation = File.Create(sfdialog.FileName);
-            //FileCreation.Close();
 
-            BinaryWriter NewFile = new BinaryWriter(FileCreation);
+            if (sfdialog.FileName == "")
+            {
+                return;
+            }
+            else
+            {
+                var FileCreation = File.Create(sfdialog.FileName);
+                //FileCreation.Close();
 
-            tpcArchiveBR.BaseStream.Position = FileLocation[treeView1.SelectedNode.Index];
-            NewFile.Write(tpcArchiveBR.ReadBytes(FileSize[treeView1.SelectedNode.Index]));
+                BinaryWriter NewFile = new BinaryWriter(FileCreation);
 
-            NewFile.Close();
-            FileCreation.Close();
+                tpcArchiveBR.BaseStream.Position = FileLocation[treeView1.SelectedNode.Index];
+                NewFile.Write(tpcArchiveBR.ReadBytes(FileSize[treeView1.SelectedNode.Index]));
 
-            MessageBox.Show("File Extracted!");
+                NewFile.Close();
+                FileCreation.Close();
 
+                MessageBox.Show("File Extracted!");
+            }
 
 
         }
