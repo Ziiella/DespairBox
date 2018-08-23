@@ -33,17 +33,17 @@ namespace DespairBox.UI
             this.Text = "WAD Editor - " + Program.FileName;
             //Program.FileName = "";
                 FileStream wadFile = new FileStream(Program.FilePath, FileMode.Open);
-                 wadfileBR = new BinaryReader(wadFile);
-                    wadfileBR.BaseStream.Position = 4;
-            int MajorVersion = wadfileBR.ReadInt32();
-                    int MinorVersion = wadfileBR.ReadInt32();
-                    int HeaderSize = wadfileBR.ReadInt32();
-                    wadfileBR.BaseStream.Position += HeaderSize;
-                    int FileCount = wadfileBR.ReadInt32();
+                wadfileBR = new BinaryReader(wadFile);
+                wadfileBR.BaseStream.Position = 4;
+                int MajorVersion = wadfileBR.ReadInt32();
+                int MinorVersion = wadfileBR.ReadInt32();
+                int HeaderSize = wadfileBR.ReadInt32();
+                wadfileBR.BaseStream.Position += HeaderSize;
+                int FileCount = wadfileBR.ReadInt32();
                 FileNameLength = new int[FileCount];
                 WadFileFileName = new string[FileCount];
                 FileSize = new long[FileCount];
-            FileLength = new long[FileCount];
+                FileLength = new long[FileCount];
             
             try
             {

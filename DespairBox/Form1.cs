@@ -49,6 +49,15 @@ namespace DespairBox
                         wadviewer.Show();
                         break;
 
+                    case 1178750514:
+                            Program.FilePath = ofDialog.FileName;
+                            Program.FileName = Path.GetFileName(ofDialog.FileName);
+
+                            FileDetectionBR.Close();
+                            FileDetection.Close();
+
+                            UI.ZankiZero.tpcArchive tpcarchive = new UI.ZankiZero.tpcArchive(); tpcarchive.MdiParent = this; tpcarchive.Show();
+                            break;
 
                     case 9460301:
                         Program.FilePath = ofDialog.FileName;

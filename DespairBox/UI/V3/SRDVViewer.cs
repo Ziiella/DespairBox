@@ -20,6 +20,8 @@ namespace DespairBox.UI.V3
 
         BinaryReader SRDVFileBR;
         BinaryReader SRDFileBR;
+        Bitmap FinalImage;
+        Bitmap PreviewImage;
         public static Stream processing;
 
         int unknown1;
@@ -79,6 +81,10 @@ namespace DespairBox.UI.V3
                 palette = SRDFileBR.ReadByte();
                 paletteid = SRDFileBR.ReadByte();
 
+                HeightLabel.Text = "Height: " + displayHeight;
+                WidthLabel.Text = "Width: " + displayWidth;
+
+
                 Console.WriteLine(unknown1);
                 Console.WriteLine(swizzle);
                 Console.WriteLine(displayWidth);
@@ -89,6 +95,11 @@ namespace DespairBox.UI.V3
 
 
                 TXREntryReadTexture();
+
+                FinalImage = Formats.General.Image.DXT1PixelData.ConvertedImage;
+
+                PreviewImage = FinalImage;
+                pictureBox1.Image = PreviewImage;
 
             }
 
@@ -219,8 +230,6 @@ namespace DespairBox.UI.V3
                         }
                         pictureBox1.Width = displayWidth;
                         pictureBox1.Height = displayHeight;
-
-                        pictureBox1.Image = resultingImage;
                         break;
 
                     default:

@@ -103,6 +103,12 @@
     <Compile Include="UI\HopesPeak\WADArchiveViewer.Designer.cs">
       <DependentUpon>WADArchiveViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ZankiZero\tpcArchive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ZankiZero\tpcArchive.Designer.cs">
+      <DependentUpon>tpcArchive.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\HopesPeak\WADArchiveViewer.resx">
       <DependentUpon>WADArchiveViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ZankiZero\tpcArchive.resx">
+      <DependentUpon>tpcArchive.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
