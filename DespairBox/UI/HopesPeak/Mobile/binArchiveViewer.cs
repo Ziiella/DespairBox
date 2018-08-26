@@ -31,8 +31,8 @@ namespace DespairBox.UI.HopesPeak.Mobile
         {
             FileStream binFile = new FileStream(Program.FilePath, FileMode.Open);
             binArchiveBR = new BinaryReader(binFile);
-            FileLocation = new long[9999];
-            FileSize = new uint[9999];
+            FileLocation = new long[6666];
+            FileSize = new uint[6666];
 
             int i = 0;
             
