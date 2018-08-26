@@ -49,6 +49,16 @@ namespace DespairBox
                         wadviewer.Show();
                         break;
 
+                    case 1953066581:
+                        Program.FilePath = ofDialog.FileName;
+                        Program.FileName = Path.GetFileName(ofDialog.FileName);
+
+                        FileDetectionBR.Close();
+                        FileDetection.Close();
+
+                        UI.HopesPeak.Mobile.binArchiveViewer unityarchive = new UI.HopesPeak.Mobile.binArchiveViewer(); unityarchive.MdiParent = this; unityarchive.Show();
+                        break;
+
                     case 1178750514:
                             Program.FilePath = ofDialog.FileName;
                             Program.FileName = Path.GetFileName(ofDialog.FileName);
@@ -170,5 +180,9 @@ namespace DespairBox
             OpenFile();
         }
 
+        private void DespairBox_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

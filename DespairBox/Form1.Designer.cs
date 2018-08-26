@@ -85,7 +85,7 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -96,7 +96,7 @@
             this.pakToolStripMenuItem,
             this.loopToolStripMenuItem});
             this.newToolStripMenuItem1.Name = "newToolStripMenuItem1";
-            this.newToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem1.Size = new System.Drawing.Size(103, 22);
             this.newToolStripMenuItem1.Text = "New";
             // 
             // wadToolStripMenuItem
@@ -131,6 +131,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "DespairBox";
             this.Text = "DespairBox";
+            this.Load += new System.EventHandler(this.DespairBox_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

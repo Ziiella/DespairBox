@@ -85,6 +85,12 @@
     <Compile Include="UI\HopesPeak\exePatcher.Designer.cs">
       <DependentUpon>exePatcher.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\HopesPeak\Mobile\binArchiveViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\HopesPeak\Mobile\binArchiveViewer.Designer.cs">
+      <DependentUpon>binArchiveViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\HopesPeak\PAKArchiveViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\HopesPeak\exePatcher.resx">
       <DependentUpon>exePatcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HopesPeak\Mobile\binArchiveViewer.resx">
+      <DependentUpon>binArchiveViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\HopesPeak\PAKArchiveViewer.resx">
       <DependentUpon>PAKArchiveViewer.cs</DependentUpon>
