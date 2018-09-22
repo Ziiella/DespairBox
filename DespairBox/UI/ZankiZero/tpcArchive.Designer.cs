@@ -37,13 +37,13 @@
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(229, 418);
+            this.treeView1.Size = new System.Drawing.Size(229, 325);
             this.treeView1.TabIndex = 0;
             // 
             // ExtractButton
             // 
             this.ExtractButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExtractButton.Location = new System.Drawing.Point(538, 383);
+            this.ExtractButton.Location = new System.Drawing.Point(480, 290);
             this.ExtractButton.Name = "ExtractButton";
             this.ExtractButton.Size = new System.Drawing.Size(75, 23);
             this.ExtractButton.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 418);
+            this.ClientSize = new System.Drawing.Size(567, 325);
             this.Controls.Add(this.ExtractButton);
             this.Controls.Add(this.treeView1);
             this.Name = "tpcArchive";

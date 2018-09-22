@@ -80,6 +80,7 @@ namespace DespairBox.UI.ZankiZero
         private void ExtractButton_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfdialog = new SaveFileDialog();
+            sfdialog.FileName = treeView1.SelectedNode.Text;
             sfdialog.Filter = ("Extracted File (*" + Path.GetExtension(treeView1.SelectedNode.Text) + ")|*" + Path.GetExtension(treeView1.SelectedNode.Text) + "|All files (*.*)|*.*");
             sfdialog.ShowDialog();
 
@@ -91,6 +92,7 @@ namespace DespairBox.UI.ZankiZero
             else
             {
                 var FileCreation = File.Create(sfdialog.FileName);
+                
                 //FileCreation.Close();
 
                 BinaryWriter NewFile = new BinaryWriter(FileCreation);
